@@ -48,18 +48,20 @@ public class EmployeeController {
 	  }
 	  
 	  @PostMapping("/empSave.htm")
-	  public String insertEmp(@ModelAttribute("empFrm") Employee emp,
-			  RedirectAttributes map,
+	  public String insertEmp(RedirectAttributes map,@ModelAttribute("empFrm") Employee emp,
 			  BindingResult errors) {
 		  EmployeeDto dto = null;
 		  String result= null;
 		  
+		  if(emp.getVflag().equalsIgnoreCase("no")) {
 		  if(validator.supports(emp.getClass()))
 			  validator.validate(emp, errors);
 			
+		  }
 		  if(errors.hasErrors())
-			  return "employee_register";
-			  
+			  return "employee_register";  
+		  
+		  
 		  dto = new EmployeeDto();
 		  BeanUtils.copyProperties(emp, dto);
 		  result = service.registerEmp(dto);
@@ -90,14 +92,17 @@ public class EmployeeController {
 	  }
 	  
 	  @PostMapping("/editEmp.htm")
-	  public String updateEmplo(@ModelAttribute Employee employee,
-			  					RedirectAttributes redirect,BindingResult errors) {
+	  public String updateEmplo(RedirectAttributes redirect,@ModelAttribute Employee employee,
+			  					BindingResult errors) {
 		  String result =null;
 		  EmployeeDto dto = new EmployeeDto();
 		  
+		  if(employee.getVflag().equalsIgnoreCase("no")) {
 		  if(validator.supports(employee.getClass()))
 			  validator.validate(employee, errors);
 			
+		  }
+		  
 		  if(errors.hasErrors())
 			  return "employee_edit";
 		  

@@ -1,13 +1,21 @@
 
 function validate(frm){
 	alert("js");
+	alert("1");
+	frm.vflag.value="yes";
+	
 	let ename=frm.ename.value;
 	let job=frm.job.value;
 	let sal=frm.sal.value;
 	let flag=true;
+	
+	
+	
 	document.getElementById("enameId").innerHTML="";
 	document.getElementById("jobId").innerHTML="";
 	document.getElementById("salId").innerHTML="";
+	
+	
 	
 	if(ename=""){
 		flag=false;

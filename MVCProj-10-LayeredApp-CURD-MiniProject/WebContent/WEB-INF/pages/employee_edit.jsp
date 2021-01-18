@@ -17,17 +17,17 @@
 	
 	<tr>
 		<td>Employee Name::</td>
-		<td><frm:input path="ename"/><frm:errors cssClass="text-danger" path="ename"/><span id="enameId"/></td>
+		<td><frm:input path="ename"/><span id="enameId"></span><frm:errors cssClass="text-danger" path="ename"/></td>
 	</tr>
 	
 	<tr>
 		<td>Job::</td>
-		<td><frm:input path="job"/><frm:errors cssClass="text-danger" path="job"/><span id="jobId"/></td>
+		<td><frm:input path="job"/><span id="jobId"></span><frm:errors cssClass="text-danger" path="job"/></td>
 	</tr>
 	
 	<tr>
 		<td>Salary::</td>
-		<td><frm:input path="sal"/><frm:errors cssClass="text-danger" path="sal"/><span id="salId"/></td>
+		<td><frm:input path="sal"/><span id="salId"></span><frm:errors cssClass="text-danger" path="sal"/></td>
 	</tr>
 	
 	<tr>
@@ -37,9 +37,10 @@
 		</frm:select></td>
 	</tr>
 	
-	<tr><td><input type="submit" value="Edit"/></td></tr>
+	<tr><td><frm:hidden path="vflag"/></td><td><input type="submit" value="Edit"/></td></tr>
 	
 	</table>
+	
 
 </frm:form>
 </div>

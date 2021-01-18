@@ -31,6 +31,7 @@
 	<tr><td><input type="submit" value="Register"/></td></tr>
 	
 	</table>
+	<frm:hidden path="vflag"/>
 
 </frm:form>
 </div>
