@@ -18,7 +18,7 @@ public class SpringMailProj1BootApplication {
 	
 	try {
 		String result =service.purchase(new String[] {"Chaat,Samosa,Bhelpuri,Litti"},
-				new float[] {50.0f,8.0f,30.0f,20.0f}, "tejasvithe@gmail.com",
+				new float[] {50.0f,8.0f,30.0f,20.0f},"ronit.blr541@gmail.com",
 				new String[] {"gauti408@gmail.com"},
 				new String[] {"tolktogautam@gmail.com"});
 		
